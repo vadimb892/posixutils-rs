@@ -3325,12 +3325,8 @@ impl MdocFormatter {
 
     fn format_an_authors(&mut self, an_type: AnType, macro_node: MacroNode) -> String {
         match an_type {
-            AnType::NoSplit => {
-                String::new()
-            }
-            AnType::Split => {
-                String::new()
-            }
+            AnType::NoSplit => String::new(),
+            AnType::Split => String::new(),
             AnType::Name => {
                 let content = self.format_inline_macro(macro_node);
                 match self.formatting_state.split_mod {
